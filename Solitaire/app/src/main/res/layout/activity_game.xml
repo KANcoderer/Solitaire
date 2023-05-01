@@ -1,0 +1,1019 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/game_screen"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#570314"
+
+    tools:context=".GameActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"/>
+
+
+
+    <ImageView
+        android:id="@+id/spade_slot"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="@dimen/width_perc_portrait"
+        app:layout_constraintHeight_percent="@dimen/height_perc_portrait"
+        app:layout_constraintHeight_max="@dimen/height_max_portrait"
+        android:background="#BC6A06"
+
+        app:srcCompat="@drawable/spade"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@id/king_slot1"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+
+        />
+    <ImageView
+        android:id="@+id/diamond_slot"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="@dimen/width_perc_portrait"
+        app:layout_constraintHeight_percent="@dimen/height_perc_portrait"
+        app:layout_constraintHeight_max="@dimen/height_max_portrait"
+        android:background="#BC6A06"
+        app:srcCompat="@drawable/diamond"
+
+        app:layout_constraintStart_toStartOf="@id/king_slot2"
+        app:layout_constraintTop_toTopOf="@id/spade_slot"
+
+        />
+    <ImageView
+        android:id="@+id/club_slot"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="@dimen/width_perc_portrait"
+        app:layout_constraintHeight_percent="@dimen/height_perc_portrait"
+        app:layout_constraintHeight_max="@dimen/height_max_portrait"
+        android:background="#BC6A06"
+        app:srcCompat="@drawable/club"
+        app:layout_constraintStart_toStartOf="@id/king_slot3"
+        app:layout_constraintTop_toTopOf="@id/spade_slot"
+
+        />
+    <ImageView
+        android:id="@+id/heart_slot"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="@dimen/width_perc_portrait"
+        app:layout_constraintHeight_percent="@dimen/height_perc_portrait"
+        app:layout_constraintHeight_max="@dimen/height_max_portrait"
+        android:background="#BC6A06"
+        app:srcCompat="@drawable/herat"
+
+
+        app:layout_constraintStart_toStartOf="@id/king_slot4"
+        app:layout_constraintTop_toTopOf="@id/spade_slot"
+        />
+
+    <ImageView
+        android:id="@+id/king_slot1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="@dimen/width_perc_portrait"
+        app:layout_constraintHeight_percent="@dimen/height_perc_portrait"
+        app:layout_constraintHeight_max="@dimen/height_max_portrait"
+        android:background="#BC6A06"
+        app:srcCompat="@drawable/king_slot"
+        app:tint="@color/black"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/king_slot2"
+        app:layout_constraintTop_toBottomOf="@id/spade_slot"
+        />
+    <ImageView
+        android:id="@+id/king_slot2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="@dimen/width_perc_portrait"
+        app:layout_constraintHeight_percent="@dimen/height_perc_portrait"
+        app:layout_constraintHeight_max="@dimen/height_max_portrait"
+        android:background="#BC6A06"
+        app:srcCompat="@drawable/king_slot"
+        app:tint="@color/black"
+        app:layout_constraintStart_toEndOf="@id/king_slot1"
+        app:layout_constraintEnd_toStartOf="@id/king_slot3"
+        app:layout_constraintTop_toTopOf="@id/king_slot1"
+        />
+    <ImageView
+        android:id="@+id/king_slot3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="@dimen/width_perc_portrait"
+        app:layout_constraintHeight_percent="@dimen/height_perc_portrait"
+        app:layout_constraintHeight_max="@dimen/height_max_portrait"
+        android:background="#BC6A06"
+        app:srcCompat="@drawable/king_slot"
+        app:tint="@color/black"
+        app:layout_constraintStart_toEndOf="@id/king_slot2"
+        app:layout_constraintEnd_toStartOf="@id/king_slot4"
+        app:layout_constraintTop_toTopOf="@id/king_slot1"
+        />
+    <ImageView
+        android:id="@+id/king_slot4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="@dimen/width_perc_portrait"
+        app:layout_constraintHeight_percent="@dimen/height_perc_portrait"
+        app:layout_constraintHeight_max="@dimen/height_max_portrait"
+        android:background="#BC6A06"
+        app:srcCompat="@drawable/king_slot"
+        app:tint="@color/black"
+        app:layout_constraintStart_toEndOf="@id/king_slot3"
+        app:layout_constraintEnd_toStartOf="@id/king_slot5"
+        app:layout_constraintTop_toTopOf="@id/king_slot1"
+        />
+    <ImageView
+        android:id="@+id/king_slot5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="@dimen/width_perc_portrait"
+        app:layout_constraintHeight_percent="@dimen/height_perc_portrait"
+        app:layout_constraintHeight_max="@dimen/height_max_portrait"
+        android:background="#BC6A06"
+        app:srcCompat="@drawable/king_slot"
+        app:tint="@color/black"
+        app:layout_constraintStart_toEndOf="@id/king_slot4"
+        app:layout_constraintEnd_toStartOf="@id/king_slot6"
+        app:layout_constraintTop_toTopOf="@id/king_slot1"
+        />
+    <ImageView
+        android:id="@+id/king_slot6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="@dimen/width_perc_portrait"
+        app:layout_constraintHeight_percent="@dimen/height_perc_portrait"
+        app:layout_constraintHeight_max="@dimen/height_max_portrait"
+        android:background="#BC6A06"
+
+
+        app:srcCompat="@drawable/king_slot"
+        app:tint="@color/black"
+        app:layout_constraintStart_toEndOf="@id/king_slot5"
+        app:layout_constraintEnd_toStartOf="@id/king_slot7"
+        app:layout_constraintTop_toTopOf="@id/king_slot1"
+        />
+    <ImageView
+        android:id="@+id/king_slot7"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="@dimen/width_perc_portrait"
+        app:layout_constraintHeight_percent="@dimen/height_perc_portrait"
+        app:layout_constraintHeight_max="@dimen/height_max_portrait"
+        android:background="#BC6A06"
+        app:srcCompat="@drawable/king_slot"
+        app:layout_constraintStart_toEndOf="@id/king_slot6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/king_slot1"
+        app:tint="@color/black" />
+    <ImageView
+        android:id="@+id/discard_slot"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="@dimen/width_perc_portrait"
+        app:layout_constraintHeight_percent="@dimen/height_perc_portrait"
+        app:layout_constraintHeight_max="@dimen/height_max_portrait"
+        android:background="#E6B374"
+        app:srcCompat="@drawable/discard_icon"
+        app:layout_constraintStart_toStartOf="@id/king_slot5"
+        app:layout_constraintTop_toTopOf="@id/spade_slot"
+        />
+
+    <ImageButton
+        android:id="@+id/shuffle_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="@dimen/width_perc_portrait"
+        app:layout_constraintHeight_percent="@dimen/height_perc_portrait"
+        app:layout_constraintHeight_max="@dimen/height_max_portrait"
+        android:background="#ED601E"
+
+        app:tint="@color/black"
+
+        app:srcCompat="@drawable/shuffle_icon"
+        android:contentDescription="@string/shuffle"
+        app:layout_constraintStart_toStartOf="@id/king_slot7"
+        app:layout_constraintTop_toTopOf="@id/spade_slot"
+         />
+    <ImageView
+        android:id="@+id/ace_club"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="@dimen/width_perc_portrait"
+        app:layout_constraintHeight_percent="@dimen/height_perc_portrait"
+        app:layout_constraintHeight_max="@dimen/height_max_portrait"
+
+        app:srcCompat="@drawable/card_back"
+
+        app:layout_constraintStart_toStartOf="@id/shuffle_button"
+        app:layout_constraintTop_toTopOf="@id/shuffle_button"
+        android:onClick="select"
+        />
+    <ImageView
+        android:id="@+id/two_club"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="@dimen/width_perc_portrait"
+        app:layout_constraintHeight_percent="@dimen/height_perc_portrait"
+        app:layout_constraintHeight_max="@dimen/height_max_portrait"
+
+        app:srcCompat="@drawable/card_back"
+
+        app:layout_constraintStart_toStartOf="@id/shuffle_button"
+        app:layout_constraintTop_toTopOf="@id/shuffle_button"
+        android:onClick="select"
+        />
+    <ImageView
+        android:id="@+id/three_club"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="@dimen/width_perc_portrait"
+        app:layout_constraintHeight_percent="@dimen/height_perc_portrait"
+        app:layout_constraintHeight_max="@dimen/height_max_portrait"
+
+        app:srcCompat="@drawable/card_back"
+
+        app:layout_constraintStart_toStartOf="@id/shuffle_button"
+        app:layout_constraintTop_toTopOf="@id/shuffle_button"
+        android:onClick="select"
+        />
+    <ImageView
+        android:id="@+id/four_club"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="@dimen/width_perc_portrait"
+        app:layout_constraintHeight_percent="@dimen/height_perc_portrait"
+        app:layout_constraintHeight_max="@dimen/height_max_portrait"
+
+        app:srcCompat="@drawable/card_back"
+
+        app:layout_constraintStart_toStartOf="@id/shuffle_button"
+        app:layout_constraintTop_toTopOf="@id/shuffle_button"
+        android:onClick="select"
+        />
+    <ImageView
+        android:id="@+id/five_club"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="@dimen/width_perc_portrait"
+        app:layout_constraintHeight_percent="@dimen/height_perc_portrait"
+        app:layout_constraintHeight_max="@dimen/height_max_portrait"
+
+        app:srcCompat="@drawable/card_back"
+
+        app:layout_constraintStart_toStartOf="@id/shuffle_button"
+        app:layout_constraintTop_toTopOf="@id/shuffle_button"
+        android:onClick="select"
+        />
+    <ImageView
+        android:id="@+id/six_club"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="@dimen/width_perc_portrait"
+        app:layout_constraintHeight_percent="@dimen/height_perc_portrait"
+        app:layout_constraintHeight_max="@dimen/height_max_portrait"
+
+        app:srcCompat="@drawable/card_back"
+
+        app:layout_constraintStart_toStartOf="@id/shuffle_button"
+        app:layout_constraintTop_toTopOf="@id/shuffle_button"
+        android:onClick="select"
+        />
+    <ImageView
+        android:id="@+id/seven_club"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="@dimen/width_perc_portrait"
+        app:layout_constraintHeight_percent="@dimen/height_perc_portrait"
+        app:layout_constraintHeight_max="@dimen/height_max_portrait"
+
+        app:srcCompat="@drawable/card_back"
+
+        app:layout_constraintStart_toStartOf="@id/shuffle_button"
+        app:layout_constraintTop_toTopOf="@id/shuffle_button"
+        android:onClick="select"
+        />
+    <ImageView
+        android:id="@+id/eight_club"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="@dimen/width_perc_portrait"
+        app:layout_constraintHeight_percent="@dimen/height_perc_portrait"
+        app:layout_constraintHeight_max="@dimen/height_max_portrait"
+
+        app:srcCompat="@drawable/card_back"
+
+        app:layout_constraintStart_toStartOf="@id/shuffle_button"
+        app:layout_constraintTop_toTopOf="@id/shuffle_button"
+        android:onClick="select"
+        />
+    <ImageView
+        android:id="@+id/nine_club"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="@dimen/width_perc_portrait"
+        app:layout_constraintHeight_percent="@dimen/height_perc_portrait"
+        app:layout_constraintHeight_max="@dimen/height_max_portrait"
+
+        app:srcCompat="@drawable/card_back"
+
+        app:layout_constraintStart_toStartOf="@id/shuffle_button"
+        app:layout_constraintTop_toTopOf="@id/shuffle_button"
+        android:onClick="select"
+        />
+    <ImageView
+        android:id="@+id/ten_club"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="@dimen/width_perc_portrait"
+        app:layout_constraintHeight_percent="@dimen/height_perc_portrait"
+        app:layout_constraintHeight_max="@dimen/height_max_portrait"
+
+        app:srcCompat="@drawable/card_back"
+
+        app:layout_constraintStart_toStartOf="@id/shuffle_button"
+        app:layout_constraintTop_toTopOf="@id/shuffle_button"
+        android:onClick="select"
+        />
+    <ImageView
+        android:id="@+id/jack_club"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="@dimen/width_perc_portrait"
+        app:layout_constraintHeight_percent="@dimen/height_perc_portrait"
+        app:layout_constraintHeight_max="@dimen/height_max_portrait"
+
+        app:srcCompat="@drawable/card_back"
+
+        app:layout_constraintStart_toStartOf="@id/shuffle_button"
+        app:layout_constraintTop_toTopOf="@id/shuffle_button"
+        android:onClick="select"
+        />
+    <ImageView
+        android:id="@+id/queen_club"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="@dimen/width_perc_portrait"
+        app:layout_constraintHeight_percent="@dimen/height_perc_portrait"
+        app:layout_constraintHeight_max="@dimen/height_max_portrait"
+
+        app:srcCompat="@drawable/card_back"
+
+        app:layout_constraintStart_toStartOf="@id/shuffle_button"
+        app:layout_constraintTop_toTopOf="@id/shuffle_button"
+        android:onClick="select"
+        />
+    <ImageView
+        android:id="@+id/king_club"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="@dimen/width_perc_portrait"
+        app:layout_constraintHeight_percent="@dimen/height_perc_portrait"
+        app:layout_constraintHeight_max="@dimen/height_max_portrait"
+
+        app:srcCompat="@drawable/card_back"
+
+        app:layout_constraintStart_toStartOf="@id/shuffle_button"
+        app:layout_constraintTop_toTopOf="@id/shuffle_button"
+        android:onClick="select"
+        />
+    <ImageView
+        android:id="@+id/ace_diamond"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="@dimen/width_perc_portrait"
+        app:layout_constraintHeight_percent="@dimen/height_perc_portrait"
+        app:layout_constraintHeight_max="@dimen/height_max_portrait"
+
+        app:srcCompat="@drawable/card_back"
+
+        app:layout_constraintStart_toStartOf="@id/shuffle_button"
+        app:layout_constraintTop_toTopOf="@id/shuffle_button"
+        android:onClick="select"
+        />
+    <ImageView
+        android:id="@+id/two_diamond"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="@dimen/width_perc_portrait"
+        app:layout_constraintHeight_percent="@dimen/height_perc_portrait"
+        app:layout_constraintHeight_max="@dimen/height_max_portrait"
+
+        app:srcCompat="@drawable/card_back"
+
+        app:layout_constraintStart_toStartOf="@id/shuffle_button"
+        app:layout_constraintTop_toTopOf="@id/shuffle_button"
+        android:onClick="select"
+        />
+    <ImageView
+        android:id="@+id/three_diamond"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="@dimen/width_perc_portrait"
+        app:layout_constraintHeight_percent="@dimen/height_perc_portrait"
+        app:layout_constraintHeight_max="@dimen/height_max_portrait"
+
+        app:srcCompat="@drawable/card_back"
+
+        app:layout_constraintStart_toStartOf="@id/shuffle_button"
+        app:layout_constraintTop_toTopOf="@id/shuffle_button"
+        android:onClick="select"
+        />
+    <ImageView
+        android:id="@+id/four_diamond"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="@dimen/width_perc_portrait"
+        app:layout_constraintHeight_percent="@dimen/height_perc_portrait"
+        app:layout_constraintHeight_max="@dimen/height_max_portrait"
+
+        app:srcCompat="@drawable/card_back"
+
+        app:layout_constraintStart_toStartOf="@id/shuffle_button"
+        app:layout_constraintTop_toTopOf="@id/shuffle_button"
+        android:onClick="select"
+        />
+    <ImageView
+        android:id="@+id/five_diamond"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="@dimen/width_perc_portrait"
+        app:layout_constraintHeight_percent="@dimen/height_perc_portrait"
+        app:layout_constraintHeight_max="@dimen/height_max_portrait"
+
+        app:srcCompat="@drawable/card_back"
+
+        app:layout_constraintStart_toStartOf="@id/shuffle_button"
+        app:layout_constraintTop_toTopOf="@id/shuffle_button"
+        android:onClick="select"
+        />
+    <ImageView
+        android:id="@+id/six_diamond"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="@dimen/width_perc_portrait"
+        app:layout_constraintHeight_percent="@dimen/height_perc_portrait"
+        app:layout_constraintHeight_max="@dimen/height_max_portrait"
+
+        app:srcCompat="@drawable/card_back"
+
+        app:layout_constraintStart_toStartOf="@id/shuffle_button"
+        app:layout_constraintTop_toTopOf="@id/shuffle_button"
+        android:onClick="select"
+        />
+    <ImageView
+        android:id="@+id/seven_diamond"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="@dimen/width_perc_portrait"
+        app:layout_constraintHeight_percent="@dimen/height_perc_portrait"
+        app:layout_constraintHeight_max="@dimen/height_max_portrait"
+
+        app:srcCompat="@drawable/card_back"
+
+        app:layout_constraintStart_toStartOf="@id/shuffle_button"
+        app:layout_constraintTop_toTopOf="@id/shuffle_button"
+        android:onClick="select"
+        />
+    <ImageView
+        android:id="@+id/eight_diamond"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="@dimen/width_perc_portrait"
+        app:layout_constraintHeight_percent="@dimen/height_perc_portrait"
+        app:layout_constraintHeight_max="@dimen/height_max_portrait"
+
+        app:srcCompat="@drawable/card_back"
+
+        app:layout_constraintStart_toStartOf="@id/shuffle_button"
+        app:layout_constraintTop_toTopOf="@id/shuffle_button"
+        android:onClick="select"
+        />
+    <ImageView
+        android:id="@+id/nine_diamond"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="@dimen/width_perc_portrait"
+        app:layout_constraintHeight_percent="@dimen/height_perc_portrait"
+        app:layout_constraintHeight_max="@dimen/height_max_portrait"
+
+        app:srcCompat="@drawable/card_back"
+
+        app:layout_constraintStart_toStartOf="@id/shuffle_button"
+        app:layout_constraintTop_toTopOf="@id/shuffle_button"
+        android:onClick="select"
+        />
+    <ImageView
+        android:id="@+id/ten_diamond"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="@dimen/width_perc_portrait"
+        app:layout_constraintHeight_percent="@dimen/height_perc_portrait"
+        app:layout_constraintHeight_max="@dimen/height_max_portrait"
+
+        app:srcCompat="@drawable/card_back"
+
+        app:layout_constraintStart_toStartOf="@id/shuffle_button"
+        app:layout_constraintTop_toTopOf="@id/shuffle_button"
+        android:onClick="select"
+        />
+    <ImageView
+        android:id="@+id/jack_diamond"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="@dimen/width_perc_portrait"
+        app:layout_constraintHeight_percent="@dimen/height_perc_portrait"
+        app:layout_constraintHeight_max="@dimen/height_max_portrait"
+
+        app:srcCompat="@drawable/card_back"
+
+        app:layout_constraintStart_toStartOf="@id/shuffle_button"
+        app:layout_constraintTop_toTopOf="@id/shuffle_button"
+        android:onClick="select"
+        />
+    <ImageView
+        android:id="@+id/queen_diamond"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="@dimen/width_perc_portrait"
+        app:layout_constraintHeight_percent="@dimen/height_perc_portrait"
+        app:layout_constraintHeight_max="@dimen/height_max_portrait"
+
+        app:srcCompat="@drawable/card_back"
+
+        app:layout_constraintStart_toStartOf="@id/shuffle_button"
+        app:layout_constraintTop_toTopOf="@id/shuffle_button"
+        android:onClick="select"
+        />
+    <ImageView
+        android:id="@+id/king_diamond"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="@dimen/width_perc_portrait"
+        app:layout_constraintHeight_percent="@dimen/height_perc_portrait"
+        app:layout_constraintHeight_max="@dimen/height_max_portrait"
+
+        app:srcCompat="@drawable/card_back"
+
+        app:layout_constraintStart_toStartOf="@id/shuffle_button"
+        app:layout_constraintTop_toTopOf="@id/shuffle_button"
+        android:onClick="select"
+        />
+    <ImageView
+        android:id="@+id/ace_spade"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="@dimen/width_perc_portrait"
+        app:layout_constraintHeight_percent="@dimen/height_perc_portrait"
+        app:layout_constraintHeight_max="@dimen/height_max_portrait"
+
+        app:srcCompat="@drawable/card_back"
+
+        app:layout_constraintStart_toStartOf="@id/shuffle_button"
+        app:layout_constraintTop_toTopOf="@id/shuffle_button"
+        android:onClick="select"
+        />
+    <ImageView
+        android:id="@+id/two_spade"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="@dimen/width_perc_portrait"
+        app:layout_constraintHeight_percent="@dimen/height_perc_portrait"
+        app:layout_constraintHeight_max="@dimen/height_max_portrait"
+
+        app:srcCompat="@drawable/card_back"
+
+        app:layout_constraintStart_toStartOf="@id/shuffle_button"
+        app:layout_constraintTop_toTopOf="@id/shuffle_button"
+        android:onClick="select"
+        />
+    <ImageView
+        android:id="@+id/three_spade"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="@dimen/width_perc_portrait"
+        app:layout_constraintHeight_percent="@dimen/height_perc_portrait"
+        app:layout_constraintHeight_max="@dimen/height_max_portrait"
+
+        app:srcCompat="@drawable/card_back"
+
+        app:layout_constraintStart_toStartOf="@id/shuffle_button"
+        app:layout_constraintTop_toTopOf="@id/shuffle_button"
+        android:onClick="select"
+        />
+    <ImageView
+        android:id="@+id/four_spade"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="@dimen/width_perc_portrait"
+        app:layout_constraintHeight_percent="@dimen/height_perc_portrait"
+        app:layout_constraintHeight_max="@dimen/height_max_portrait"
+
+        app:srcCompat="@drawable/card_back"
+
+        app:layout_constraintStart_toStartOf="@id/shuffle_button"
+        app:layout_constraintTop_toTopOf="@id/shuffle_button"
+        android:onClick="select"
+        />
+    <ImageView
+        android:id="@+id/five_spade"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="@dimen/width_perc_portrait"
+        app:layout_constraintHeight_percent="@dimen/height_perc_portrait"
+        app:layout_constraintHeight_max="@dimen/height_max_portrait"
+
+        app:srcCompat="@drawable/card_back"
+
+        app:layout_constraintStart_toStartOf="@id/shuffle_button"
+        app:layout_constraintTop_toTopOf="@id/shuffle_button"
+        android:onClick="select"
+        />
+    <ImageView
+        android:id="@+id/six_spade"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="@dimen/width_perc_portrait"
+        app:layout_constraintHeight_percent="@dimen/height_perc_portrait"
+        app:layout_constraintHeight_max="@dimen/height_max_portrait"
+
+        app:srcCompat="@drawable/card_back"
+
+        app:layout_constraintStart_toStartOf="@id/shuffle_button"
+        app:layout_constraintTop_toTopOf="@id/shuffle_button"
+        android:onClick="select"
+        />
+    <ImageView
+        android:id="@+id/seven_spade"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="@dimen/width_perc_portrait"
+        app:layout_constraintHeight_percent="@dimen/height_perc_portrait"
+        app:layout_constraintHeight_max="@dimen/height_max_portrait"
+
+        app:srcCompat="@drawable/card_back"
+
+        app:layout_constraintStart_toStartOf="@id/shuffle_button"
+        app:layout_constraintTop_toTopOf="@id/shuffle_button"
+        android:onClick="select"
+        />
+    <ImageView
+        android:id="@+id/eight_spade"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="@dimen/width_perc_portrait"
+        app:layout_constraintHeight_percent="@dimen/height_perc_portrait"
+        app:layout_constraintHeight_max="@dimen/height_max_portrait"
+
+        app:srcCompat="@drawable/card_back"
+
+        app:layout_constraintStart_toStartOf="@id/shuffle_button"
+        app:layout_constraintTop_toTopOf="@id/shuffle_button"
+        android:onClick="select"
+        />
+    <ImageView
+        android:id="@+id/nine_spade"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="@dimen/width_perc_portrait"
+        app:layout_constraintHeight_percent="@dimen/height_perc_portrait"
+        app:layout_constraintHeight_max="@dimen/height_max_portrait"
+
+        app:srcCompat="@drawable/card_back"
+
+        app:layout_constraintStart_toStartOf="@id/shuffle_button"
+        app:layout_constraintTop_toTopOf="@id/shuffle_button"
+        android:onClick="select"
+        />
+    <ImageView
+        android:id="@+id/ten_spade"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="@dimen/width_perc_portrait"
+        app:layout_constraintHeight_percent="@dimen/height_perc_portrait"
+        app:layout_constraintHeight_max="@dimen/height_max_portrait"
+
+        app:srcCompat="@drawable/card_back"
+
+        app:layout_constraintStart_toStartOf="@id/shuffle_button"
+        app:layout_constraintTop_toTopOf="@id/shuffle_button"
+        android:onClick="select"
+        />
+    <ImageView
+        android:id="@+id/jack_spade"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="@dimen/width_perc_portrait"
+        app:layout_constraintHeight_percent="@dimen/height_perc_portrait"
+        app:layout_constraintHeight_max="@dimen/height_max_portrait"
+
+        app:srcCompat="@drawable/card_back"
+
+        app:layout_constraintStart_toStartOf="@id/shuffle_button"
+        app:layout_constraintTop_toTopOf="@id/shuffle_button"
+        android:onClick="select"
+        />
+    <ImageView
+        android:id="@+id/queen_spade"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="@dimen/width_perc_portrait"
+        app:layout_constraintHeight_percent="@dimen/height_perc_portrait"
+        app:layout_constraintHeight_max="@dimen/height_max_portrait"
+
+        app:srcCompat="@drawable/card_back"
+
+        app:layout_constraintStart_toStartOf="@id/shuffle_button"
+        app:layout_constraintTop_toTopOf="@id/shuffle_button"
+        android:onClick="select"
+        />
+    <ImageView
+        android:id="@+id/king_spade"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="@dimen/width_perc_portrait"
+        app:layout_constraintHeight_percent="@dimen/height_perc_portrait"
+        app:layout_constraintHeight_max="@dimen/height_max_portrait"
+
+        app:srcCompat="@drawable/card_back"
+
+        app:layout_constraintStart_toStartOf="@id/shuffle_button"
+        app:layout_constraintTop_toTopOf="@id/shuffle_button"
+        android:onClick="select"
+        />
+    <ImageView
+        android:id="@+id/ace_heart"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="@dimen/width_perc_portrait"
+        app:layout_constraintHeight_percent="@dimen/height_perc_portrait"
+        app:layout_constraintHeight_max="@dimen/height_max_portrait"
+
+        app:srcCompat="@drawable/card_back"
+
+        app:layout_constraintStart_toStartOf="@id/shuffle_button"
+        app:layout_constraintTop_toTopOf="@id/shuffle_button"
+        android:onClick="select"
+        />
+    <ImageView
+        android:id="@+id/two_heart"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="@dimen/width_perc_portrait"
+        app:layout_constraintHeight_percent="@dimen/height_perc_portrait"
+        app:layout_constraintHeight_max="@dimen/height_max_portrait"
+
+        app:srcCompat="@drawable/card_back"
+
+        app:layout_constraintStart_toStartOf="@id/shuffle_button"
+        app:layout_constraintTop_toTopOf="@id/shuffle_button"
+        android:onClick="select"
+        />
+    <ImageView
+        android:id="@+id/three_heart"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="@dimen/width_perc_portrait"
+        app:layout_constraintHeight_percent="@dimen/height_perc_portrait"
+        app:layout_constraintHeight_max="@dimen/height_max_portrait"
+
+        app:srcCompat="@drawable/card_back"
+
+        app:layout_constraintStart_toStartOf="@id/shuffle_button"
+        app:layout_constraintTop_toTopOf="@id/shuffle_button"
+        android:onClick="select"
+        />
+    <ImageView
+        android:id="@+id/four_heart"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="@dimen/width_perc_portrait"
+        app:layout_constraintHeight_percent="@dimen/height_perc_portrait"
+        app:layout_constraintHeight_max="@dimen/height_max_portrait"
+
+        app:srcCompat="@drawable/card_back"
+
+        app:layout_constraintStart_toStartOf="@id/shuffle_button"
+        app:layout_constraintTop_toTopOf="@id/shuffle_button"
+        android:onClick="select"
+        />
+    <ImageView
+        android:id="@+id/five_heart"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="@dimen/width_perc_portrait"
+        app:layout_constraintHeight_percent="@dimen/height_perc_portrait"
+        app:layout_constraintHeight_max="@dimen/height_max_portrait"
+
+        app:srcCompat="@drawable/card_back"
+
+        app:layout_constraintStart_toStartOf="@id/shuffle_button"
+        app:layout_constraintTop_toTopOf="@id/shuffle_button"
+        android:onClick="select"
+        />
+    <ImageView
+        android:id="@+id/six_heart"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="@dimen/width_perc_portrait"
+        app:layout_constraintHeight_percent="@dimen/height_perc_portrait"
+        app:layout_constraintHeight_max="@dimen/height_max_portrait"
+
+        app:srcCompat="@drawable/card_back"
+
+        app:layout_constraintStart_toStartOf="@id/shuffle_button"
+        app:layout_constraintTop_toTopOf="@id/shuffle_button"
+        android:onClick="select"
+        />
+    <ImageView
+        android:id="@+id/seven_heart"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="@dimen/width_perc_portrait"
+        app:layout_constraintHeight_percent="@dimen/height_perc_portrait"
+        app:layout_constraintHeight_max="@dimen/height_max_portrait"
+
+        app:srcCompat="@drawable/card_back"
+
+        app:layout_constraintStart_toStartOf="@id/shuffle_button"
+        app:layout_constraintTop_toTopOf="@id/shuffle_button"
+        android:onClick="select"
+        />
+    <ImageView
+        android:id="@+id/eight_heart"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="@dimen/width_perc_portrait"
+        app:layout_constraintHeight_percent="@dimen/height_perc_portrait"
+        app:layout_constraintHeight_max="@dimen/height_max_portrait"
+
+        app:srcCompat="@drawable/card_back"
+
+        app:layout_constraintStart_toStartOf="@id/shuffle_button"
+        app:layout_constraintTop_toTopOf="@id/shuffle_button"
+        android:onClick="select"
+        />
+    <ImageView
+        android:id="@+id/nine_heart"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="@dimen/width_perc_portrait"
+        app:layout_constraintHeight_percent="@dimen/height_perc_portrait"
+        app:layout_constraintHeight_max="@dimen/height_max_portrait"
+
+        app:srcCompat="@drawable/card_back"
+
+        app:layout_constraintStart_toStartOf="@id/shuffle_button"
+        app:layout_constraintTop_toTopOf="@id/shuffle_button"
+        android:onClick="select"
+        />
+    <ImageView
+        android:id="@+id/ten_heart"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="@dimen/width_perc_portrait"
+        app:layout_constraintHeight_percent="@dimen/height_perc_portrait"
+        app:layout_constraintHeight_max="@dimen/height_max_portrait"
+
+        app:srcCompat="@drawable/card_back"
+
+        app:layout_constraintStart_toStartOf="@id/shuffle_button"
+        app:layout_constraintTop_toTopOf="@id/shuffle_button"
+        android:onClick="select"
+        />
+    <ImageView
+        android:id="@+id/jack_heart"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="@dimen/width_perc_portrait"
+        app:layout_constraintHeight_percent="@dimen/height_perc_portrait"
+        app:layout_constraintHeight_max="@dimen/height_max_portrait"
+
+        app:srcCompat="@drawable/card_back"
+
+        app:layout_constraintStart_toStartOf="@id/shuffle_button"
+        app:layout_constraintTop_toTopOf="@id/shuffle_button"
+        android:onClick="select"
+        />
+    <ImageView
+        android:id="@+id/queen_heart"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="@dimen/width_perc_portrait"
+        app:layout_constraintHeight_percent="@dimen/height_perc_portrait"
+        app:layout_constraintHeight_max="@dimen/height_max_portrait"
+
+        app:srcCompat="@drawable/card_back"
+
+        app:layout_constraintStart_toStartOf="@id/shuffle_button"
+        app:layout_constraintTop_toTopOf="@id/shuffle_button"
+        android:onClick="select"
+        />
+    <ImageView
+        android:id="@+id/king_heart"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="@dimen/width_perc_portrait"
+        app:layout_constraintHeight_percent="@dimen/height_perc_portrait"
+        app:layout_constraintHeight_max="@dimen/height_max_portrait"
+
+        app:srcCompat="@drawable/card_back"
+
+        app:layout_constraintStart_toStartOf="@id/shuffle_button"
+        app:layout_constraintTop_toTopOf="@id/shuffle_button"
+        android:onClick="select"
+        />
+    <TextView
+        android:id="@+id/movesText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+
+        android:text="@string/moves"
+        android:padding="20dp"
+        android:paddingEnd="0dp"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/timeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/time"
+        android:textSize="20sp"
+
+        android:padding="20dp"
+        android:paddingRight="0dp"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@id/movesText"
+        app:layout_constraintEnd_toStartOf="@id/stockText"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/stockText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/stock"
+        android:textSize="20sp"
+        android:padding="20dp"
+        android:paddingEnd="0dp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@id/stock"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+    <TextView
+        android:id="@+id/moves"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+
+        android:padding="20dp"
+        android:paddingStart="0dp"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@id/movesText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="viewStart"
+        android:textSize="20sp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:paddingLeft="0dp"
+        android:textColor="@color/white"
+
+        app:layout_constraintStart_toEndOf="@id/timeText"
+
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/stock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:textSize="20sp"
+        android:padding="20dp"
+        android:paddingEnd="30dp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

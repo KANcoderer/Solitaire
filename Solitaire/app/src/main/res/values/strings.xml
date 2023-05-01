@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Solitaire</string>
+    <string name="new_game">New Game</string>
+    <string name="continue_game">Continue Game</string>
+    <string name="home">Home</string>
+    <string name="settings">Settings</string>
+    <string name="moves">Moves: </string>
+    <string name="time">Time: </string>
+    <string name="stock">Stock: </string>
+    <string name="shuffle">Shuffle</string>
+    <string name="undo">Undo</string>
+    <!-- Preference Titles -->
+    <string name="color_header">Color</string>
+    <string name="bground_color_title">Background Color</string>
+    <string name="dark_mode_title">Dark Mode</string>
+
+    <string name="gamplay_title">Gamplay</string>
+    <string name="undo_selection">Disable Undo Button</string>
+    <string name="intializing">…initializing…</string>
+    <string name="win_statement">CONGRADUALTIONS!!!! YOU WIN!!!</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+</resources>

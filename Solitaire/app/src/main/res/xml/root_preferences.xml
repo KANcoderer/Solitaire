@@ -1,0 +1,18 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="@string/color_header">
+
+        <ListPreference
+            android:defaultValue="Red"
+            android:entries="@array/background_colors"
+            android:entryValues="@array/background_colors"
+            android:key="background"
+            android:title="@string/bground_color_title"
+            />
+
+    </PreferenceCategory>
+
+
+
+</PreferenceScreen>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+got from https://stackoverflow.com/questions/7785649/creating-a-3d-flip-animation-in-android-using-xml
+-->
+<objectAnimator xmlns:android="http://schemas.android.com/apk/res/android"
+    android:valueFrom="0" android:valueTo="360" android:propertyName="rotationY">
+</objectAnimator>

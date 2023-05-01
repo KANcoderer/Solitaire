@@ -1,0 +1,11 @@
+<resources>
+    <!-- Reply Preference -->
+    <string-array name="background_colors">
+        <item>Red</item>
+        <item>Orange</item>
+        <item>Yellow</item>
+        <item>Green</item>
+        <item>Blue</item>
+        <item>Purple</item>
+    </string-array>
+</resources>

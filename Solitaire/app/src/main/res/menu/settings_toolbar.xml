@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="edu.psu.solitaire.SettingsActivity">
+    <item android:id="@+id/home"
+        android:icon="@drawable/home_icon"
+        android:title="@string/home"
+        app:showAsAction="always"
+        android:onClick="startHome"/>
+    <item android:id="@+id/game"
+        android:icon="@drawable/start_game_icon"
+        android:title="@string/continue_game"
+        app:showAsAction="ifRoom"
+        android:onClick="startContinueGame"/>
+</menu>
